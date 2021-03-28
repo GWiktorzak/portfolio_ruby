@@ -5,6 +5,8 @@ State of Orange Tree is stored in instance variables (@age, @height, ...) and be
 To expose instance variables for interface and to set the value OrangeTree Object is using attr_accessor that is creating getter and setter methode. 
 
 ## Simulate Orange Tree Life
+1. Clone repository
+2. In Terminal run ruby OOP_OrangeTree/interface.rb
 
 ## Orange Tree Specs
 Each year, the tree age by 1 year
