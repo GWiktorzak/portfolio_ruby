@@ -1,6 +1,8 @@
 require_relative '../app/models/meal'
+
 RSpec.describe Meal do
   let(:meal) { Meal.new({ id: 1, name: 'Margherita', price: 8 }) }
+
   it 'should be initialized with a hash of properties' do
     # meal = Meal.new({ id: 1, name: 'Margherita', pricce: 8 })
     expect(meal).to be_a(Meal)
