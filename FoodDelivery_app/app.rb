@@ -1,13 +1,24 @@
-require_relative './app/models/meal'
-require_relative './app/repositories/meal_repository'
-require_relative './app/controllers/meals_controller'
+require_relative 'app/models/meal'
+require_relative 'app/repositories/meal_repository'
+require_relative 'app/controllers/meals_controller'
+require_relative 'app/repositories/customer_repository'
+require_relative 'app/controllers/customers_controller'
 require_relative 'router'
 
+# files
+MEALS_CSV_FILE = File.join(__dir__, 'data/meals.csv')
+CUSTOMERS_CSV_FILE = File.join(__dir__, 'data/customers.csv')
+
 # meals
-csv_file_meals = File.join(__dir__, './data/meals.csv')
-meal_repository = MealRepository.new(csv_file_meals)
+meal_repository = MealRepository.new(MEALS_CSV_FILE )
 meals_controller = MealsController.new(meal_repository)
 
-router = Router.new(meals_controller)
-# Start the app
+# customers
+customer_repository = CustomerRepository.new(CUSTOMERS_CSV_FILE)
+customers_controller = CustomersController.new(customer_repository)
+
+# router
+router = Router.new(meals_controller, customers_controller)
+# start the app
 router.run
+
