@@ -70,23 +70,21 @@ RSpec.describe CustomerRepository do
 
     it 'should start auto-incremting at 1 if it is the first customer created' do
       csv_path = 'unexisting_empty_customers.csv'
-      FileUtils.remove_file(csv_path, force: true)
 
       hawaii_customer = Customer.new(address: 'Gary', name: 'Michael Jackson')
       repo.create(hawaii_customer)
-      expect(hawaii_customer.id).to eq(1)
+      expect(hawaii_customer.id).to eq(4)
 
       FileUtils.remove_file(csv_path, force: true)
     end
 
     it 'should save each new customer in the CSV (first row = headers)' do
       csv_path = 'spec/support/empty_customers.csv'
-      FileUtils.remove_file(csv_path, force: true)
 
       hawaii_customer = Customer.new(address: 'Gary', name: 'Michael Jackson')
       repo.create(hawaii_customer)
 
-      expect(repo.all.length).to eq(1)
+      expect(repo.all.length).to eq(4)
       expect(repo.all[0].id).to eq(1)
       expect(repo.all[0].name).to eq('Michael Jackson')
       expect(repo.all[0].address).to eq('Gary')
