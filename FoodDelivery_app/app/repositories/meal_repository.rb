@@ -1,4 +1,5 @@
 require 'csv'
+require_relative '../models/meal'
 
 class MealRepository
   attr_accessor :csv_path
