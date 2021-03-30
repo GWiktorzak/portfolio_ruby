@@ -1,25 +1,28 @@
-require_relative '../repositories/meal_repository'
-require_relative '../views/view'
+require_relative '../views/meals_view'
 require_relative '../models/meal'
 
 class MealsController
-  attr_accessor :meal_repository
-  attr_reader :view
-
   def initialize(meal_repository)
     @meal_repository = meal_repository
-    @view = View.new
+    @meals_view = MealsView.new
   end
 
   def add
-    # ask the user for a name and price & store
-    new_meal = @view.ask_name_and_price
-    meal = Meal.new(new_meal)
+    name = @meals_view.ask_user_for(:name)
+    price = @meals_view.ask_user_for(:price).to_i
+    meal = Meal.new(name: name, price: price)
     @meal_repository.create(meal)
+    display_meals
   end
 
   def list
+    display_meals
+  end
+
+  private
+
+  def display_meals
     meals = @meal_repository.all
-    @view.list_all(meals)
+    @meals_view.display(meals)
   end
 end
