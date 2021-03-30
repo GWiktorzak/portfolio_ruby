@@ -8,7 +8,7 @@ To expose instance variables for interface and to set the value OrangeTree Objec
 1. Clone repository
 2. In Terminal run ruby OOP_OrangeTree/interface.rb
 
-## Orange Tree Specs
+## 🌳 Orange Tree Simulation
 Each year, the tree age by 1 year
 and grows 1 meter until it is 10 years old.
 
