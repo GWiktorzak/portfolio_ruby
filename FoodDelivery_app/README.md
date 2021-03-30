@@ -16,14 +16,14 @@ MVC is a pattern for the architecture of a software application. It separates an
 
 ## 🍿 User Action
  - As an employee, I can log in
- # Manager Action:
+ ### Manager Action:
   - can add a new meal
   - can list all the meals
   - can add a new customer
   - can list all the customers
   - can add a new order
   - can list all the undelivered orders
- # Rider:
+ ### Rider:
   - can mark one of my orders as delivered
   - list all my undelivered orders
 
