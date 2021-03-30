@@ -1,3 +1,4 @@
+
 ### 🚧 Coding in progress 🚧
 
 ## 🛵 Food Delivery App 
@@ -12,7 +13,7 @@ MVC is a pattern for the architecture of a software application. It separates an
 - Controllers for handling the user interface and application
 - Views for handling graphical user interface objects and presentation
 - This separation results in user requests being processed as follows:
-
+<img src="https://user-images.githubusercontent.com/67414488/112988425-1d581100-9164-11eb-9afe-8cbb6e14e96b.jpg" width="250" height="250">
 ## User Action
  - As an employee, I can log in
  Manager Action
