@@ -1,9 +1,9 @@
 class Meal
   attr_accessor :id, :name, :price
 
-  def initialize(attr = {})
-    @id = attr[:id]
-    @name = attr[:name]
-    @price = attr[:price]
+  def initialize(attributes  = {})
+    @id = attributes [:id]
+    @name = attributes [:name]
+    @price = attributes [:price]
   end
 end

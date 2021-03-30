@@ -1,9 +1,9 @@
 class Customer
   attr_accessor :id, :name, :address
 
-  def initialize(attr = {})
-    @id = attr[:id]
-    @name = attr[:name]
-    @address = attr[:address]
+  def initialize(attributes  = {})
+    @id = attributes[:id]
+    @name = attributes[:name]
+    @address = attributes[:address]
   end
 end
