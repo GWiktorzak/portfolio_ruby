@@ -1,4 +1,4 @@
-### 🚧 Coding in progress 🚧
+# 🚧 Coding in progress 🚧
 
 ## 🛵 Food Delivery App 
 The program is designed for one restaurant. It was created to represent MVC architecture in software applications.
@@ -37,12 +37,12 @@ Run app
 ```
 ruby FoodDelivery_app/app.rb
 ```
-# 🔑 Manager Log in
+### 🔑 Manager Log in
 
 username: daria
 password: secret
 
-# 🔑 Rider Log in
+### 🔑 Rider Log in
 
 username: greg
 password: secret
