@@ -1,16 +1,14 @@
 require 'csv'
 require_relative '../models/customer'
-class CustomerRepository
-  attr_accessor :csv_path
 
-  def initialize(csv_path)
+class CustomerRepository
+  def initialize(csv_file)
+    @csv_file = csv_file
     @customers = []
     @next_id = 1
-    @csv_path = csv_path
-    load_csv if File.exist?(csv_path)
+    load_csv if File.exist?(@csv_file)
   end
 
-  # create user
   def create(customer)
     customer.id = @next_id
     @customers << customer
@@ -18,34 +16,31 @@ class CustomerRepository
     save_csv
   end
 
-  # display all users
   def all
     @customers
   end
 
-  # find user
-  def find(number)
-    @customers.find { |customer| customer.id == number }
+  def find(id)
+    @customers.find { |customer| customer.id == id }
   end
 
   private
 
-  def load_csv
-    csv_options = { headers: :first_row, header_converters: :symbol }
-    CSV.foreach(@csv_path, csv_options) do |row|
-      row[:id] = row[:id].to_i
-      customer = Customer.new(row)
-      @customers << customer
-    end
-    @next_id = @customers.last.id + 1 if @customers.last
-  end
-
   def save_csv
-    CSV.open(@csv_path, 'wb') do |csv|
+    CSV.open(@csv_file, 'wb') do |csv|
       csv << %w[id name address]
       @customers.each do |customer|
         csv << [customer.id, customer.name, customer.address]
       end
     end
+  end
+
+  def load_csv
+    csv_options = { headers: :first_row, header_converters: :symbol }
+    CSV.foreach(@csv_file, csv_options) do |row|
+      row[:id] = row[:id].to_i
+      @customers << Customer.new(row)
+    end
+    @next_id = @customers.last.id + 1 unless @customers.empty?
   end
 end
