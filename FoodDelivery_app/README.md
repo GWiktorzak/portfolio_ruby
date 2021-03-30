@@ -45,8 +45,6 @@ Rider Log in
 
 username: greg
 password: secret
-    
-    or
-
+    --
 username: greg
 password: secret
