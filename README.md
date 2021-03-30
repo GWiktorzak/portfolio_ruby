@@ -1,5 +1,5 @@
 ### Portfolio - Ruby
-This branch includes two projects writen in Ruby.
+This branch includes two projects written in Ruby.
 
 
 ## OOP_OrangeTree
