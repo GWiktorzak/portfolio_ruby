@@ -10,10 +10,10 @@ class Employee
   end
 
   def manager?
-    @role == "manager"
+    @role == 'manager'
   end
 
   def rider?
-    @role == "rider"
+    @role == 'rider'
   end
 end
