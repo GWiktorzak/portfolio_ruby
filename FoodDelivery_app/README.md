@@ -13,20 +13,21 @@ MVC is a pattern for the architecture of a software application. It separates an
 - Views for handling graphical user interface objects and presentation
 - This separation results in user requests being processed as follows:
 <img src="https://user-images.githubusercontent.com/67414488/112988842-92c3e180-9164-11eb-9669-8b7b8bd96c2e.jpg" width="250" height="250">
-## User Action
- - As an employee, I can log in
- Manager Action
- - can add a new meal
- - can list all the meals
- - can add a new customer
- - can list all the customers
- - can add a new order
- - can list all the undelivered orders
- Rider
- - can mark one of my orders as delivered
- - list all my undelivered orders
 
-## Run App
+## 🍿 User Action
+ - As an employee, I can log in
+ # Manager Action:
+  - can add a new meal
+  - can list all the meals
+  - can add a new customer
+  - can list all the customers
+  - can add a new order
+  - can list all the undelivered orders
+ # Rider:
+  - can mark one of my orders as delivered
+  - list all my undelivered orders
+
+## 🚀 Run App
 
 Download or clone  portfolio_ruby
 ```
@@ -36,15 +37,15 @@ Run app
 ```
 ruby FoodDelivery_app/app.rb
 ```
-Manager Log in
+# 🔑 Manager Log in
 
 username: daria
 password: secret
 
-Rider Log in
+# 🔑 Rider Log in
 
 username: greg
 password: secret
-or
-username: greg
+
+username: bob
 password: secret
