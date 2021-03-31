@@ -1,4 +1,7 @@
 # 🚧 Coding in progress 🚧
+### Manager Action:
+  - can list all the delivered orders
+  - can list all the delivered orders by rider name
 
 ## 🛵 Food Delivery App 
 The program is designed for one restaurant. It was created to represent MVC architecture in software applications.
