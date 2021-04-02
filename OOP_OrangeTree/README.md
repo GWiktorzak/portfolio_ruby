@@ -4,10 +4,16 @@ OPP is about data(or state) and behavior.
 State of Orange Tree is stored in instance variables (@age, @height, ...) and behavior is defined by instance methods.
 To expose instance variables for interface and to set the value OrangeTree Object is using attr_accessor that is creating getter and setter methode. 
 
-## Simulate Orange Tree Life
-1. Clone repository
-2. In Terminal run ruby OOP_OrangeTree/interface.rb
+## 🚀 Simulate Orange Tree Life
 
+Download or clone  portfolio_ruby
+```
+git clone git@github.com:GWiktorzak/portfolio_ruby.git
+```
+Run app
+```
+ruby OOP_OrangeTree/interface.rb
+```
 ## 🌳 Orange Tree Simulation
 Each year, the tree age by 1 year
 and grows 1 meter until it is 10 years old.
