@@ -9,7 +9,3 @@ more about this project [ 👉here ](OOP_OrangeTree/README.md)
 ## FoodDelivery_app
 Represents MVC architecture.
 more about this project [ 👉here ](FoodDelivery_app/README.md)
-
-## TDD_rspec
-🚧in progress
-Behaviour Driven Development for Ruby..
